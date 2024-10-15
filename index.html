@@ -8,32 +8,31 @@
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./index/css/styles.css">
 </head>
 
 <body>
-<header class="fixed-top">
-    <section class="navbar">
-        <nav>
-            <div class="icon" onclick="toggleMenu()">
-                &#9776;
+<header class="fixed-top bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Project</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="menu" id="menu">
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="project.html">Project</a>
-                </li>
-            </ul>
-        </nav>
-        <h2 class="web-space">Creative Artifact</h2>
-        <img src="./index/images/logos/Sheridan_College_Logo.png" alt="Sheridan Logo" class="sheridan-logo" usemap="#sheridan-logo">
-        <map name="sheridan-logo">
-            <area shape="rect" coords="0,0,200,200" alt="Sheridan Logo" href="https://www.sheridancollege.ca/en" target="_blank">
-        </map>
-    </section>
+            <h2 class="navbar-text">Creative Artifact</h2>
+            <a href="https://www.sheridancollege.ca/en" target="_blank">
+                <img src="./index/images/logos/Sheridan_College_Logo.png" alt="Sheridan Logo" class="img-fluid" style="max-height: 50px;">
+            </a>
+        </div>
+    </nav>
 </header>
 
 <section class="container mt-5 pt-5">
@@ -83,14 +82,11 @@
     </div>
 </section>
 
-
-
-<!-- Bootstrap JS and Popper.js -->
+<!-- Bootstrap JS and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="./index/scripts/script.js"></script>
 </body>
 
 </html>
+
