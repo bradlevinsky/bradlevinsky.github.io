@@ -1,0 +1,123 @@
+/*Ping pong styles*/
+canvas {
+  background: #000;
+  margin-top: -60px;
+  width: calc(100vh - 25);
+  height: calc(100vh - 120px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    position: relative;
+  }
+  
+  .button {
+    position: absolute;
+    left: 60px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    text-align: center;
+}
+  
+  .btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px; 
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .sideChat {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 70vh; 
+    width: 15vw; 
+    overflow-y: auto;
+    position: fixed;
+    top: 42%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+  
+  .btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .control {
+      text-align: center;
+  }
+
+  /*main*/
+  body {
+    background-image: url('../Images/backgroundImage.png');
+    background-size: cover; 
+    background-position: center; 
+    margin: 0; 
+    padding: 0;
+    margin-top: 3%;
+  }
+  
+  header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .intro-section {
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 35%;
+
+  }
+  
+  h1{
+    text-align: center;
+    
+  }
+  .intro-heading{
+    text-align: left;
+  }
+
+  .games-section {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to new row */
+    justify-content: space-between;
+  }
+  
+  article {
+    width: 48%; 
+    margin-bottom: 2%; 
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  article img{
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .games-section {
+      flex-direction: column;
+    }
+  
+    article {
+      width: 100%; 
+    }
+  }
+  
+
