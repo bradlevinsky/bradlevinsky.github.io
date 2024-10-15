@@ -5,21 +5,60 @@
     <title>Creativity</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Make the header fixed */
+        .navbar-fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030; /* Ensure it's above other elements */
+        }
 
+        /* Add padding to the body to avoid content being hidden behind the fixed header */
+        body {
+            padding-top: 60px;
+        }
+    </style>
 </head>
-<HEADER>
-
-</HEADER>
 <body>
+
+<!-- Fixed Header with Hamburger Menu -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Navbar Header -->
+        <div class="navbar-header">
+            <!-- Hamburger Icon -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Brand Name or Logo -->
+            <a class="navbar-brand" href="#">My Website</a>
+        </div>
+
+        <!-- Collapsible Navbar Links -->
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
 <div class="container-fluid">
     <h1>My First Bootstrap Page</h1>
     <p>This is some text</p>
-
 </div>
 
-</body>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
 </html>
