@@ -10,22 +10,30 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./index/css/styles.css">
+
+    <script>
+        function displayMemberInfo(member) {
+            const info = {
+                angelina: `<h3>Angelina Baldin</h3><p>Place Holder Text</p>`,
+                anna: `<h3>Anna Ismambetova</h3><p>Place Holder Text</p>`,
+                breanna: `<h3>Breanna Jackson</h3><p>Place Holder Text</p>`,
+                brad: `<h3>Brad Levinsky</h3><p>Place Holder Text</p>`
+            };
+            document.getElementById('member-info').innerHTML = info[member];
+        }
+    </script>
 </head>
 
 <body>
-<header class="fixed-top">
+<header>
     <section class="navbar" style="background-color: #f8f9fa; color: #343a40;">
         <nav>
             <div class="icon" onclick="toggleMenu()">
                 &#9776;
             </div>
             <ul class="menu" id="menu">
-                <li>
-                    <a href="aboutus.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Place Holder link 2</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Place Holder link 2</a></li>
             </ul>
         </nav>
         <h2 class="web-space" style="color: #343a40;">CULT26529GD Creative Leadership and Problem Solving</h2>
@@ -36,56 +44,40 @@
     </section>
 </header>
 
-<section class="container mt-5 pt-5">
-    <header class="text-center mt-4 mt-sm-5 mt-md-3">
-        <h1>Place holder heading: Creative Artifact</h1>
+<section class="container mt-2 pt-2">
+    <header class="text-center mt-4">
+        <h1>Group 7: Creative Artifact</h1>
     </header>
 </section>
-
 
 <section class="container mt-4">
     <div class="row">
         <div class="col-lg-2">
-            <!-- Sidebar Left (empty for now) -->
+            <h5>Team Members</h5>
+            <ol>
+                <li><a href="#" onclick="displayMemberInfo('angelina')">Angelina Baldin</a></li>
+                <li><a href="#" onclick="displayMemberInfo('anna')">Anna Ismambetova</a></li>
+                <li><a href="#" onclick="displayMemberInfo('breanna')">Breanna Jackson</a></li>
+                <li><a href="#" onclick="displayMemberInfo('brad')">Brad Levinsky</a></li>
+            </ol>
         </div>
 
-        <article class="col-lg-10">
-            <h3>Placeholder Sub heading.</h3>
+        <article class="col-lg-10" id="member-info">
+            <h3 class="text-center">Information about our team</h3>
             <ul class="list-unstyled">
                 <li class="mb-4">
-                    <p>
-                        This is placeholder text: All leaders, to a certain degree, do the same thing. Whether you’re talking about an executive, sports coach,
-                        or schoolteacher, leadership is enabling others to accomplish something they couldn’t do on their own. Some people in
-                        formal leadership positions are poor leaders, and many good leaders have no formal authority. In this sense, leadership is
-                        something you do and not something you are. It is a person’s actions, rather than their words or job title, that inspire trust and commitment.
-                    </p>
+                    <p>To see information about our individual team members, please click their name on the left side.</p>
                 </li>
                 <li class="mb-4">
-                    <p>
-                        More placeholder text: What’s more, leadership is not something people are born with. Because good leadership is often expressed through
-                        behavior rather than personality, it is a skill that can be learned. How? Getting to know oneself is a key first step.
-                        The most effective leaders are highly conscious of their own thoughts and beliefs and show up with integrity as their fully authentic selves.
-                    </p>
                 </li>
                 <li class="mb-4">
-                    <p>
-                        Even more placeholder text: There are many contexts and ways in which leadership is exercised. According to McKinsey analysis of
-                        academic literature and a global survey of nearly 200,000 people in 81 organizations, there are four types of behaviors that account
-                        for 89 percent of leadership effectiveness:
-                    </p>
                 </li>
                 <li class="mb-4">
-                    <p>
-                        And more palceholder text: Effective leaders know that what works in one situation will not necessarily work every time.
-                        Leadership strategies must reflect an organization’s context. For example, a situational approach enables executives to focus on
-                        the leadership behaviors that are most relevant to the organization as it evolves.
-                    </p>
                 </li>
             </ul>
         </article>
     </div>
 </section>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -95,3 +87,5 @@
 </body>
 
 </html>
+
+

@@ -1,41 +1,30 @@
-/* 
-Brad Levinsky
-February 4, 2024
-This is all of my stylings, i tried to make organise then to some degree.
-There are also a couple that are not currently being used that is because
-I have changed my pages quite a bit as i have been working on them. And i left
-the old ones there just incase i want to use them in the future they will be
-already built.
-*/
-/* Global*/
+/* Global */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 120px;
     background-color: #f1f1f1;
     font-family: 'Times New Roman', Times, serif;
+    /* Removed padding-top since the header is no longer fixed */
 }
-/* Header*/
-.fixed-header {
-    position: fixed;
-    top: 0;
-    width: 98.5%;
-    background-color: #f8f9fa ;
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #f1f1f1;
     color: #343a40;
     padding: 15px;
     text-align: center;
-    z-index: 2000;
 }
 
+/* Central Header */
 .central-header {
     text-align: center;
     background-color: #f1f1f1;
     margin: 0;
     text-transform: uppercase;
-    
 }
 
-/*Navigation*/
+/* Navigation */
 .navbar {
     background-color: #333;
     padding: 15px;
@@ -82,7 +71,7 @@ body {
     flex-grow: 1;
 }
 
-/*Footer*/
+/* Footer */
 footer {
     background-color: #777;
     padding: 10px;
@@ -93,22 +82,20 @@ footer {
     width: 100%;
 }
 
-/*Main Content*/
+/* Main Content */
 .content {
     display: flex;
 }
 
-/*Sidebar*/
-
+/* Sidebar */
 .sidebar-left {
     width: 10%;
     min-width: 200px;
-    background-color: #dcdcdc; 
+    background-color: #dcdcdc;
     position: fixed;
-    top: 110px; 
-    bottom: 0px; 
+    top: 0; /* Adjusted to start from the top */
+    bottom: 0;
     overflow-y: auto;
-    
 }
 
 .sidebar-left h3 {
@@ -116,7 +103,7 @@ footer {
     top: 5px;
 }
 
-/*Article Section*/
+/* Article Section */
 article {
     float: left;
     padding: 10px;
@@ -128,10 +115,11 @@ article {
     width: calc(100% - 220px);
     margin-left: 220px;
     background-color: #f1f1f1;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-bottom: 60px;
 }
-.article-right h3{
+
+.article-right h3 {
     text-transform: capitalize;
     text-align: center;
 }
@@ -140,19 +128,19 @@ article {
     width: 65%;
     margin-left: 25%;
     background-color: #f1f1f1;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
-/*Central Paragraph*/
+
+/* Central Paragraph */
 .central-paragraph {
     width: calc(100% - 220px);
     text-align: center;
     background-color: #f1f1f1;
     margin-left: 220px;
     font-weight: bold;
-    
 }
 
-/*Extras*/
+/* Extras */
 .loggin {
     margin-top: 10px;
     margin-left: 5px;
@@ -169,41 +157,48 @@ article {
     margin-right: 20px;
 }
 
-.project-list{
+.project-list {
     margin-top: 5px;
     margin-bottom: 0;
 }
 
 .gallery {
     display: flex;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
 }
-.section-anchor{
+
+.section-anchor {
     padding-top: 120px;
     margin-top: 120px;
 }
+
 .gallery img {
-    max-width: 200px; 
+    max-width: 200px;
 }
 
 .description {
-    flex: 1; 
+    flex: 1;
 }
-.description h2{
+
+.description h2 {
     text-align: center;
 }
 
-/*Links*/
-.sidebar-left a:link{
-    color:blue
+/* Links */
+.sidebar-left a:link {
+    color: blue;
 }
-.sidebar-left a:visited{
-    color:green
+
+.sidebar-left a:visited {
+    color: green;
 }
-.sidebar-left a:hover{
-    color:orange
+
+.sidebar-left a:hover {
+    color: orange;
 }
-.sidebar-left a:active{
-    color:red
+
+.sidebar-left a:active {
+    color: red;
 }
+
