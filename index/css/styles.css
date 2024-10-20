@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
     font-family: 'Times New Roman', Times, serif;
-    /* Removed padding-top since the header is no longer fixed */
+
 }
 
 /* Header */
@@ -201,4 +201,25 @@ article {
 .sidebar-left a:active {
     color: red;
 }
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it stays on top of other elements */
+    font-size: 24px;
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black arrow */
+    border: none; /* No border */
+    outline: none; /* Remove outline */
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+}
+
+#scrollTopBtn:hover {
+    color: rgba(0, 0, 0, 0.7); /* Make the arrow slightly transparent on hover */
+}
+
 

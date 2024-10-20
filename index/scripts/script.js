@@ -53,6 +53,29 @@ function authenticate() {
     }
 }
 
+// Get the button
+var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+}
+
+// Scroll to the top of the document when the user clicks the button
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling
+    });
+}
 
 
 

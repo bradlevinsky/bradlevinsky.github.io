@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<header class="fixed-top">
+<header>
     <section class="navbar" style="background-color: #f8f9fa; color: #343a40;">
         <nav>
             <div class="icon" onclick="toggleMenu()">
@@ -42,14 +42,10 @@
     </header>
 </section>
 
-
 <section class="container mt-4">
     <div class="row">
-        <div class="col-lg-2">
-            <!-- Sidebar Left (empty for now) -->
-        </div>
-
-        <article class="col-lg-10">
+        <!-- Removed Sidebar -->
+        <article class="col-lg-12">
             <h3>Placeholder Sub heading.</h3>
             <ul class="list-unstyled">
                 <li class="mb-4">
@@ -76,7 +72,7 @@
                 </li>
                 <li class="mb-4">
                     <p>
-                        And more palceholder text: Effective leaders know that what works in one situation will not necessarily work every time.
+                        And more placeholder text: Effective leaders know that what works in one situation will not necessarily work every time.
                         Leadership strategies must reflect an organization’s context. For example, a situational approach enables executives to focus on
                         the leadership behaviors that are most relevant to the organization as it evolves.
                     </p>
@@ -85,7 +81,11 @@
         </article>
     </div>
 </section>
-
+<footer><!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        &#8679;
+    </button>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -95,3 +95,5 @@
 </body>
 
 </html>
+
+
