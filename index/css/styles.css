@@ -73,13 +73,9 @@ header {
 
 /* Footer */
 footer {
-    background-color: #777;
-    padding: 10px;
+    background-color: transparent; /* Makes the footer blend with the page background */
     text-align: center;
-    color: white;
-    z-index: 1000;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
 }
 
 /* Main Content */
@@ -152,9 +148,8 @@ article {
 }
 
 .sheridan-logo {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
+    max-width: 100%; /* Makes sure the logo doesn't overflow its container */
+    height: auto;    /* Maintains the aspect ratio of the image */
 }
 
 .project-list {
