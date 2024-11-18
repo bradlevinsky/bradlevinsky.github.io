@@ -217,4 +217,12 @@ article {
     color: rgba(0, 0, 0, 0.7); /* Make the arrow slightly transparent on hover */
 }
 
+.apa-references li {
+    margin-bottom: 10px; /* Spacing between citations */
+    text-align: left; /* Ensures text is left-aligned */
+    text-indent: -20px; /* Hanging indent: negative first-line indent */
+    padding-left: 20px; /* Indent subsequent lines */
+    line-height: 1.6; /* Improves readability */
+}
+
 

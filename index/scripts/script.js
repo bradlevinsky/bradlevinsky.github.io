@@ -62,12 +62,14 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) && scrollableHeight > 50) {
         scrollTopBtn.style.display = "block";
     } else {
         scrollTopBtn.style.display = "none";
     }
 }
+
 
 // Scroll to the top of the document when the user clicks the button
 function topFunction() {
