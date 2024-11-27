@@ -218,11 +218,34 @@ article {
 }
 
 .apa-references li {
-    margin-bottom: 10px; /* Spacing between citations */
+    margin-bottom: 15px; /* Slightly more space between citations */
     text-align: left; /* Ensures text is left-aligned */
     text-indent: -20px; /* Hanging indent: negative first-line indent */
     padding-left: 20px; /* Indent subsequent lines */
     line-height: 1.6; /* Improves readability */
 }
+
+.float-left {
+    float: left;
+    margin-right: 15px; /* Space between image and text */
+    max-width: 250px; /* Adjust as needed for image size */
+}
+
+.float-right {
+    float: right;
+    margin-left: 15px; /* Space between image and text */
+    max-width: 250px; /* Adjust as needed for image size */
+}
+
+/* To handle small screens */
+@media (max-width: 600px) {
+    .float-left,
+    .float-right {
+        float: none;
+        margin: 0 auto 15px; /* Center image and add space below */
+        display: block;
+    }
+}
+
 
 

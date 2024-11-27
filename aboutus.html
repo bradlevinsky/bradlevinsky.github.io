@@ -14,9 +14,36 @@
     <script>
         function displayMemberInfo(member) {
             const info = {
-                angelina: `<h3 class="text-center">Angelina Baldin</h3><p>Place Holder Text</p>`,
-                anna: `<h3 class="text-center">Anna Ismambetova</h3><p>Place Holder Text</p>`,
-                breanna: `<h3 class="text-center">Breanna Jackson</h3><p>Place Holder Text</p>`,
+                angelina: `
+            <h3 class="text-center">Angelina Baldin</h3>
+            <div class="d-flex align-items-start mt-3">
+                <div class="mr-3">
+                    <img src="index/images/photos/angelina.png" alt="Angelina Baldin" class="img-fluid" style="max-width: 200px;">
+                </div>
+                <div>
+                    <p>Place Holder Text</p>
+                </div>
+            </div>`,
+                anna: `
+            <h3 class="text-center">Anna Ismambetova</h3>
+            <div class="d-flex align-items-start mt-3">
+                <div class="mr-3">
+                    <img src="index/images/photos/anna.png" alt="Anna Ismambetova" class="img-fluid" style="max-width: 200px;">
+                </div>
+                <div>
+                    <p>Place Holder Text</p>
+                </div>
+            </div>`,
+                breanna: `
+            <h3 class="text-center">Breanna Jackson</h3>
+            <div class="d-flex align-items-start mt-3">
+                <div class="mr-3">
+                    <img src="index/images/photos/breanna.png" alt="Breanna Jackson" class="img-fluid" style="max-width: 200px;">
+                </div>
+                <div>
+                    <p>I am currently enrolled at Sheridan College, Davis Campus; in my third year of the Honours Bachelor of Community Safety. I have previously graduate from Investigation – Public and Private as well as Community and Justice Services. All of these programs have helped me develop different problem-solving skills that I have been able to use in different aspects of life. I have a drive for obtaining new knowledge and a passion for helping people anywhere possible.</p>
+                </div>
+            </div>`,
                 brad: `
             <h3 class="text-center">Brad Levinsky</h3>
             <div class="d-flex align-items-start mt-3">
@@ -30,8 +57,8 @@
             };
             document.getElementById('member-info').innerHTML = info[member];
         }
-
     </script>
+
 </head>
 
 <body>
