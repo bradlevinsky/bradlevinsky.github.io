@@ -53,8 +53,6 @@ function authenticate() {
     }
 }
 
-<<<<<<< HEAD
-=======
 // Get the button
 var scrollTopBtn = document.getElementById("scrollTopBtn");
 
@@ -64,12 +62,14 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) && scrollableHeight > 50) {
         scrollTopBtn.style.display = "block";
     } else {
         scrollTopBtn.style.display = "none";
     }
 }
+
 
 // Scroll to the top of the document when the user clicks the button
 function topFunction() {
@@ -78,7 +78,6 @@ function topFunction() {
         behavior: 'smooth' // Smooth scrolling
     });
 }
->>>>>>> parent of 36a1f27 (updated site)
 
 
 
