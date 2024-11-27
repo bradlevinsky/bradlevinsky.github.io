@@ -206,3 +206,28 @@ article {
 .sidebar-left a:active{
     color:red
 }
+<<<<<<< HEAD
+=======
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it stays on top of other elements */
+    font-size: 24px;
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black arrow */
+    border: none; /* No border */
+    outline: none; /* Remove outline */
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+}
+
+#scrollTopBtn:hover {
+    color: rgba(0, 0, 0, 0.7); /* Make the arrow slightly transparent on hover */
+}
+
+
+>>>>>>> parent of 36a1f27 (updated site)
