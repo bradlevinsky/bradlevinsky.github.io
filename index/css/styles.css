@@ -30,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .menu {
@@ -39,11 +40,11 @@ header {
     display: none;
     background-color: white;
     position: absolute;
-    width: auto;
     left: 0;
     max-height: calc(100vh - 50px);
     overflow-y: auto;
     z-index: 1000;
+    width: auto;
 }
 
 .menu li {
@@ -65,6 +66,7 @@ header {
     margin: 0;
     text-align: center;
     flex-grow: 1;
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -96,6 +98,7 @@ article {
 .article-right h3 {
     text-transform: capitalize;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .article-right-img {
@@ -112,7 +115,7 @@ article {
 
 /* Extras */
 .sheridan-logo {
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
 }
 
@@ -158,6 +161,23 @@ article {
     color: rgba(0, 0, 0, 0.7);
 }
 
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar,
@@ -192,22 +212,14 @@ article {
         width: 100%;
         height: auto;
     }
-}
 
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%; /* Ensures the container doesn't exceed the screen width */
-}
+    .web-space {
+        font-size: 1rem; /* Adjust text size on smaller screens */
+    }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    .sheridan-logo {
+        max-width: 150px;
+    }
 }
 
 
