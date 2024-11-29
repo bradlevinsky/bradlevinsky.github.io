@@ -10,29 +10,30 @@ header {
     width: 100%;
     background-color: #f1f1f1;
     color: #343a40;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Central Header */
-.central-header {
-    text-align: center;
-    background-color: #f1f1f1;
-    margin: 0;
-    text-transform: uppercase;
 }
 
 /* Navigation */
 .navbar {
-    background-color: #333;
-    padding: 15px;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    flex-wrap: wrap; /* Handle wrapping for small screens */
+    padding: 10px 15px;
 }
 
+.navbar h2 {
+    font-size: 1rem; /* Adjusted size for smaller screens */
+    margin: 0;
+    white-space: nowrap; /* Prevent wrapping */
+    color: #343a40;
+}
+
+.navbar img {
+    max-width: 50px; /* Ensure logo is responsive */
+    height: auto;
+}
+
+/* Adjusted Menu Style */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -40,33 +41,42 @@ header {
     display: none;
     background-color: white;
     position: absolute;
+    top: 100%; /* Position menu below the navbar */
     left: 0;
-    max-height: calc(100vh - 50px);
-    overflow-y: auto;
-    z-index: 1000;
-    width: auto;
+    width: 200px; /* Set a fixed width for the menu */
+    max-width: 90%; /* Make it responsive for smaller screens */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+    border: 1px solid #ddd; /* Optional border for styling */
 }
 
+/* Menu Items */
 .menu li {
     padding: 10px;
-    background-color: #333;
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a separator between items */
+}
+
+.menu li:last-child {
+    border-bottom: none; /* Remove border from the last item */
 }
 
 .menu a {
     text-decoration: none;
-    color: white;
+    color: #333;
+    display: block; /* Make the link fill the menu item */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.menu a:hover {
+    background-color: #f8f9fa;
+    color: #007bff; /* Add a hover effect */
 }
 
 .icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
-}
-
-.web-space {
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
-    font-size: 1.2rem;
+    margin-right: 10px;
 }
 
 /* Footer */
@@ -98,7 +108,6 @@ article {
 .article-right h3 {
     text-transform: capitalize;
     text-align: center;
-    font-size: 1.8rem;
 }
 
 .article-right-img {
@@ -115,7 +124,7 @@ article {
 
 /* Extras */
 .sheridan-logo {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -167,7 +176,7 @@ article {
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 100%; /* Ensures the container doesn't exceed the screen width */
 }
 
 .video-wrapper iframe {
@@ -180,15 +189,12 @@ article {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar,
-    .web-space,
-    .container-fluid {
-        padding-left: 15px;
-        padding-right: 15px;
+    .navbar img {
+        max-width: 40px; /* Smaller logo for narrow screens */
     }
 
-    .text-center, .text-justify {
-        text-align: center;
+    .navbar h2 {
+        font-size: 0.9rem; /* Adjust text size for smaller screens */
     }
 
     .float-left,
@@ -200,7 +206,7 @@ article {
     }
 
     .article-right h3 {
-        font-size: 1.5rem; /* Adjust for smaller screens */
+        font-size: 1.5rem; /* Adjust font size for headers on smaller screens */
     }
 
     .apa-references li {
@@ -212,15 +218,8 @@ article {
         width: 100%;
         height: auto;
     }
-
-    .web-space {
-        font-size: 1rem; /* Adjust text size on smaller screens */
-    }
-
-    .sheridan-logo {
-        max-width: 150px;
-    }
 }
+
 
 
 
