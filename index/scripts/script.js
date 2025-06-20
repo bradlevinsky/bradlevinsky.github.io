@@ -1,12 +1,11 @@
-// Function to toggle the menu bar visibility
+// Toggle the menu bar visibility
 function toggleMenu() {
     const menu = document.getElementById("menu");
     const isMenuVisible = menu.style.display === "block";
-
     menu.style.display = isMenuVisible ? "none" : "block";
 }
 
-// Function to load and adjust PDF viewer height dynamically
+// Adjust PDF viewer height dynamically (if used)
 function loadPDF(pdfPath) {
     const pdfViewer = document.getElementById("pdfViewer");
     const footer = document.querySelector("footer");
@@ -19,28 +18,23 @@ function loadPDF(pdfPath) {
     }
 }
 
-// Authentication function to validate username and password
+// Hardcoded login validation with redirect
 function authenticate() {
     const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("pwd");
+
     const username = usernameInput.value.trim().toLowerCase();
     const password = passwordInput.value;
 
-    if (["brad", "alex"].includes(username) && password === "creative") {
-        document.querySelectorAll("#hidden_work").forEach(item => {
-            item.style.display = "list-item";
-        });
+    if (username === "chris" && password === "Ambedkar") {
+        console.log("Login successful, redirecting...");
+        window.location.href = "profile.html"; // This will work!
     } else {
         alert("Incorrect username or password.");
     }
-
-    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-        usernameInput.value = "";
-        passwordInput.value = "";
-    }
 }
 
-// Scroll-to-top functionality
+// Scroll-to-top button functionality
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 window.onscroll = function () {
@@ -51,24 +45,20 @@ function scrollFunction() {
     const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-    if (scrolled > 20 && scrollableHeight > 50) {
+    if (scrollTopBtn && scrolled > 20 && scrollableHeight > 50) {
         scrollTopBtn.style.display = "block";
-    } else {
+    } else if (scrollTopBtn) {
         scrollTopBtn.style.display = "none";
     }
 }
 
-// Smooth scroll to the top of the page
+// Smooth scroll to the top
 function topFunction() {
     window.scrollTo({
         top: 0,
         behavior: "smooth",
     });
 }
-
-
-
-
 
 
 

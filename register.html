@@ -1,10 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - FixIt Forward</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">FixIt Forward</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Registration Form -->
+<section class="container py-5">
+  <h2 class="text-center mb-4">Register for FixIt Forward</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form onsubmit="handleRegister(event)">
+        <!-- Role Selection -->
+        <div class="mb-3">
+          <label class="form-label">I am registering as:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="roleMentor" onclick="toggleSections()">
+            <label class="form-check-label" for="roleMentor">Mentor (Retired Tradesperson)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="roleHomeowner" onclick="toggleSections()">
+            <label class="form-check-label" for="roleHomeowner">Homeowner (Needs Help)</label>
+          </div>
+        </div>
+
+        <!-- Personal Info -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" placeholder="e.g. 416-555-1234" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" placeholder="e.g. Toronto" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Create Password</label>
+          <input type="password" class="form-control" id="password" placeholder="••••••••" required />
+        </div>
+
+        <!-- Mentor Skills -->
+        <div class="mb-4" id="mentorSkills" style="display: none;">
+          <label class="form-label">Skills You Offer (as a Mentor)</label>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerPlumbing"><label class="form-check-label" for="offerPlumbing">Plumbing</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerElectrical"><label class="form-check-label" for="offerElectrical">Electrical</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerRoofing"><label class="form-check-label" for="offerRoofing">Roofing</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerHVAC"><label class="form-check-label" for="offerHVAC">HVAC</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerDrywall"><label class="form-check-label" for="offerDrywall">Drywall</label></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerPainting"><label class="form-check-label" for="offerPainting">Painting</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerCarpentry"><label class="form-check-label" for="offerCarpentry">Carpentry</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerFlooring"><label class="form-check-label" for="offerFlooring">Flooring</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerMasonry"><label class="form-check-label" for="offerMasonry">Masonry</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="offerGeneral"><label class="form-check-label" for="offerGeneral">General Repairs</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Homeowner Skills -->
+        <div class="mb-4" id="homeownerSkills" style="display: none;">
+          <label class="form-label">Skills You Need Help With (as a Homeowner)</label>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needPlumbing"><label class="form-check-label" for="needPlumbing">Plumbing</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needElectrical"><label class="form-check-label" for="needElectrical">Electrical</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needRoofing"><label class="form-check-label" for="needRoofing">Roofing</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needHVAC"><label class="form-check-label" for="needHVAC">HVAC</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needDrywall"><label class="form-check-label" for="needDrywall">Drywall</label></div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needPainting"><label class="form-check-label" for="needPainting">Painting</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needCarpentry"><label class="form-check-label" for="needCarpentry">Carpentry</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needFlooring"><label class="form-check-label" for="needFlooring">Flooring</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needMasonry"><label class="form-check-label" for="needMasonry">Masonry</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="needGeneral"><label class="form-check-label" for="needGeneral">General Repairs</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4">
+  <p class="mb-0">&copy; 2025 FixIt Forward. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- JS: Toggle Role Sections & Redirect -->
+<script>
+  function toggleSections() {
+    const mentor = document.getElementById("roleMentor").checked;
+    const homeowner = document.getElementById("roleHomeowner").checked;
+
+    document.getElementById("mentorSkills").style.display = mentor ? "block" : "none";
+    document.getElementById("homeownerSkills").style.display = homeowner ? "block" : "none";
+  }
+
+  function handleRegister(event) {
+    event.preventDefault();
+    // Optional: Save data to localStorage or show success
+    window.location.href = "login.html";
+  }
+</script>
 </body>
 </html>
