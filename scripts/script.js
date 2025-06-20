@@ -22,17 +22,21 @@ function loadPDF(pdfPath) {
 function authenticate() {
     const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("pwd");
-
     const username = usernameInput.value.trim().toLowerCase();
     const password = passwordInput.value;
 
+    // Clear any fake session
+    sessionStorage.removeItem('loggedIn');
+
     if (username === "chris" && password === "Ambedkar") {
-        console.log("Login successful, redirecting...");
-        window.location.href = "profile.html"; // This will work!
+        // Simulate login session
+        sessionStorage.setItem('loggedIn', 'true');
+        window.location.href = "profile.html";
     } else {
         alert("Incorrect username or password.");
     }
 }
+
 
 // Scroll-to-top button functionality
 const scrollTopBtn = document.getElementById("scrollTopBtn");
