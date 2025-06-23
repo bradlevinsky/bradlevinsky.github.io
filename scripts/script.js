@@ -64,6 +64,9 @@ function topFunction() {
     });
 }
 
+function redirectToProfile() {
+    window.location.href = "profile.html";
+}
 
 
 
